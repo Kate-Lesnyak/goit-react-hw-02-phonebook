@@ -70,8 +70,8 @@ font-size: 24px;
 
 h1 , h2 {
 line-height: 1.22;
-color: #FFFFFF;
-background-color: #338309;
+color: ${({ theme }) => theme.colors.secondaryTextColor};
+background-color: ${({ theme }) => theme.colors.backgroundAndBorderColor};
 text-align: center;
 margin-bottom: 20px;
 padding: 10px;

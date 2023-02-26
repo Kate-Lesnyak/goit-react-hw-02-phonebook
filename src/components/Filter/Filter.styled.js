@@ -5,7 +5,7 @@ display: flex;
 gap: 10px;
 align-items: center;
 width: 400px;
-color: #000000;
+color: ${({ theme }) => theme.colors.primaryTextColor};
 margin-left: auto;
 margin-right: auto;
 margin-bottom: 12px;
@@ -14,13 +14,13 @@ margin-bottom: 12px;
 
 export const StyledInput = styled.input`
 padding: 8px 16px;
-border: 1px solid #010101;
+border: ${({ theme }) => `1px solid ${theme.colors.borderInputColor}`};
 border-radius: 10px;
 transition-property: border;
-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: ${({ theme }) => `border ${theme.colors.transition}`};
 
 :focus {
 outline: none;
-border: 1px solid #F0940A;
+border: ${({ theme }) => `1px solid ${theme.colors.accentColor}`};
 }
 `;

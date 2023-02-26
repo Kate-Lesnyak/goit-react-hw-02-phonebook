@@ -6,7 +6,7 @@ display: flex;
 gap: 12px;
 flex-direction: column;
 padding: 12px;
-border: 1px solid #338309;
+border: ${({ theme }) => `1px solid ${theme.colors.backgroundAndBorderColor}`};
 border-radius: 10px;
 margin-left: auto;
 margin-right: auto;
