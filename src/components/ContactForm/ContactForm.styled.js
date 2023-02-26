@@ -28,21 +28,7 @@ max-width: 152px;
 margin: auto;
 padding: 8px 32px;
 font-weight: 500;
-color: ${({ theme }) => theme.colors.buttonTextColor};
-background-color: transparent;
-border: ${({ theme }) => `1px solid ${theme.colors.accentColor}`};
-border-radius: 10px;
 margin-top: 4px;
-transition-property: color, background-color, box-shadow;
-transition: ${({ theme }) => `background-color ${theme.transition}, color ${theme.transition}, box-shadow ${theme.transition}`};
-
-
-:hover, :focus {
-outline: none;
-color: ${({ theme }) => theme.colors.secondaryTextColor};
-background-color: ${({ theme }) => theme.colors.accentColor};
-box-shadow: ${({ theme }) => theme.boxShadow};
-}
 `;
 
 export const StyledInput = styled.input`
