@@ -28,13 +28,13 @@ export class App extends Component {
       number,
     };
 
-    const savedName = contacts.find(({ name }) => name === name.toLowerCase());
-
-    return savedName
-      ? alert(`${name} is already in contacts!`)
-      : this.setState(({ contacts }) => ({
-          contacts: [contact, ...contacts],
-        }));
+    const normalizedName = name.toLowerCase();
+    if (contacts.find(({ name }) => name.toLowerCase() === normalizedName)) {
+      return alert(`${name} is already in contacts!`);
+    }
+    return this.setState(({ contacts }) => ({
+      contacts: [contact, ...contacts],
+    }));
   };
 
   deleteContact = contactId => {
@@ -47,9 +47,9 @@ export class App extends Component {
 
   getVisibleContacts = () => {
     const { contacts, filter } = this.state;
-    const normalazedFilter = filter.toLowerCase();
+    const normalizedFilter = filter.toLowerCase();
     return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(normalazedFilter)
+      contact.name.toLowerCase().includes(normalizedFilter)
     );
   };
 

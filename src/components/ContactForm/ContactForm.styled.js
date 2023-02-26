@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Form, Field, ErrorMessage } from 'formik';
 
-export const StyledForm = styled.form`
+export const StyledForm = styled(Form)`
 width: 400px;
 display: flex;
 gap: 12px;
@@ -31,7 +32,7 @@ font-weight: 500;
 margin-top: 4px;
 `;
 
-export const StyledInput = styled.input`
+export const StyledInput = styled(Field)`
 padding: 8px 16px;
 border: ${({ theme }) => `1px solid ${theme.colors.borderInputColor}`};
 border-radius: 10px;
@@ -42,4 +43,20 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 outline: none;
 border: ${({ theme }) => `1px solid ${theme.colors.accentColor}`};
 }
+ `;
+
+export const StyledErrorMessage = styled(ErrorMessage)`
+color: red;
 `;
+// export const StyledInput = styled.input`
+  // padding: 8px 16px;
+  // border: ${({ theme }) => `1px solid ${theme.colors.borderInputColor}`};
+  // border-radius: 10px;
+  // transition-property: border;
+  // transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  // :focus {
+  // outline: none;
+  // border: ${({ theme }) => `1px solid ${theme.colors.accentColor}`};
+  // }
+
