@@ -3,7 +3,7 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { GlobalStyle } from './GlobaleStyle';
 import { nanoid } from 'nanoid';
 
-import { ContactList } from './/ContactList/ContactList';
+import { ContactList } from './ContactList';
 import { Filter } from './Filter';
 import { Section } from './Section';
 import { Layout } from './Layout';
